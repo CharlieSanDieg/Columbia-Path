@@ -39,7 +39,9 @@ export function parseMatrixText(text: string): MatrixEntry[] {
     seen.add(code);
 
     const nums: number[] = [];
-    for (const m of line.matchAll(/(\d{1,3})%/g)) {
+    const re = /(\d{1,3})%/g;
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(line)) !== null) {
       const n = parseFloat(m[1]);
       if (n >= 0 && n <= 100) nums.push(n);
     }
