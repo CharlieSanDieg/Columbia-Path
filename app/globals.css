@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --columbia-blue: #B9D9EB;
+  --columbia-navy: #003087;
+  --columbia-light: #E8F4F8;
+  --columbia-mid: #7BB3CC;
+  --columbia-dark: #1a4a6e;
+  --cream: #F7F3EE;
+  --ink: #1C1C1E;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+/* Grain overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--columbia-mid); border-radius: 3px; }
+
+/* Shimmer for loading */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--columbia-light) 0%,
+    var(--columbia-blue) 50%,
+    var(--columbia-light) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Animated underline for links */
+.underline-animated {
+  position: relative;
+}
+.underline-animated::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--columbia-navy);
+  transition: width 0.3s ease;
+}
+.underline-animated:hover::after {
+  width: 100%;
+}
+
+/* Card hover */
+.course-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 48, 135, 0.12);
+}
+
+/* Vibe button */
+.vibe-btn {
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+.vibe-btn.active {
+  border-color: var(--columbia-navy);
+  background: var(--columbia-navy);
+  color: white;
+}
+.vibe-btn:not(.active):hover {
+  border-color: var(--columbia-mid);
+  background: var(--columbia-light);
+}

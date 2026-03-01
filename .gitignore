@@ -1,0 +1,8 @@
+.next/
+node_modules/
+dist-scripts/
+.env
+.env.local
+*.pdf
+!data/syllabi/README.md
+.env.local

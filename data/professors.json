@@ -1,0 +1,50 @@
+{
+  "daniel-hsu": {
+    "name": "Daniel Hsu",
+    "slug": "daniel-hsu"
+  },
+  "liam-paninski": {
+    "name": "Liam Paninski",
+    "slug": "liam-paninski"
+  },
+  "kathleen-mckeown": {
+    "name": "Kathleen McKeown",
+    "slug": "kathleen-mckeown"
+  },
+  "mark-brown": {
+    "name": "Mark Brown",
+    "slug": "mark-brown"
+  },
+  "murray-low": {
+    "name": "Murray Low",
+    "slug": "murray-low"
+  },
+  "ronghui-gu": {
+    "name": "Ronghui Gu",
+    "slug": "ronghui-gu"
+  },
+  "bernard-salanie": {
+    "name": "Bernard Salanie",
+    "slug": "bernard-salanie"
+  },
+  "gail-kaiser": {
+    "name": "Gail Kaiser",
+    "slug": "gail-kaiser"
+  },
+  "taylor-dotson": {
+    "name": "Taylor Dotson",
+    "slug": "taylor-dotson"
+  },
+  "sanjiv-das": {
+    "name": "Sanjiv Das",
+    "slug": "sanjiv-das"
+  },
+  "shih-fu-chang": {
+    "name": "Shih-Fu Chang",
+    "slug": "shih-fu-chang"
+  },
+  "ying-wei": {
+    "name": "Ying Wei",
+    "slug": "ying-wei"
+  }
+}
