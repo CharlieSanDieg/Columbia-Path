@@ -105,7 +105,7 @@ export function extractSkills(text: string): string[] {
     }
   }
 
-  return [...new Set(found)].slice(0, 12);
+  return Array.from(new Set(found)).slice(0, 12);
 }
 
 export function extractPrerequisites(text: string): string[] {
