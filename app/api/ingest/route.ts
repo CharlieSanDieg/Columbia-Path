@@ -63,7 +63,10 @@ export async function POST(req: NextRequest) {
       instructor: extractInstructor(text),
       credits: extractCredits(text),
       year: "both",
-      enrollmentProbability: 0.5,
+      enrollmentProbabilities: {
+        year1: { favorite: 0.5, great: 0.5, good: 0.5, acceptable: 0.5 },
+        year2: { favorite: 0.5, great: 0.5, good: 0.5, acceptable: 0.5 },
+      },
       workloadIndex: workload,
       assignmentFrequency: extractAssignmentFrequency(text),
       skills,
